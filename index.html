@@ -9,58 +9,104 @@
 
 <meta name="description" content="Servicios profesionales de traducción pública de documentos y localización de contenidos.">
 
+<!-- Google Font -->
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
 
 body{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#207E98;
+font-family:'Poppins', sans-serif;
 color:white;
+background:linear-gradient(135deg,#207E98,#1b6a7f);
 scroll-behavior:smooth;
 }
 
-/* estructura general */
+/* HERO */
 
-section{
+.hero{
 min-height:100vh;
 display:flex;
-flex-direction:column;
-justify-content:center;
 align-items:center;
-text-align:center;
-padding:40px;
+justify-content:center;
+padding:60px;
 }
 
-/* títulos */
+.hero-container{
+display:flex;
+align-items:center;
+justify-content:space-between;
+max-width:1200px;
+width:100%;
+gap:60px;
+}
+
+/* texto hero */
+
+.hero-text{
+max-width:600px;
+}
 
 h1{
-font-size:48px;
+font-size:56px;
 margin-bottom:20px;
 }
 
+.subtitulo{
+font-size:22px;
+opacity:0.9;
+line-height:1.6;
+}
+
+/* imagen */
+
+.hero-img img{
+width:420px;
+border-radius:12px;
+box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* secciones */
+
+section{
+padding:100px 40px;
+text-align:center;
+}
+
 h2{
-font-size:36px;
+font-size:40px;
 margin-bottom:40px;
 }
 
-/* texto */
+/* servicios */
 
-p{
-max-width:700px;
-font-size:20px;
-opacity:0.9;
+.servicios{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+max-width:1000px;
+margin:auto;
 }
 
-/* botones */
+.servicio{
+background:rgba(255,255,255,0.1);
+padding:30px;
+border-radius:15px;
+backdrop-filter:blur(5px);
+}
+
+/* botón */
 
 .boton{
+display:inline-block;
+margin-top:30px;
 background:white;
 color:#207E98;
 padding:15px 30px;
 border-radius:30px;
 text-decoration:none;
-font-weight:bold;
-margin:10px;
+font-weight:600;
 transition:0.3s;
 }
 
@@ -68,33 +114,32 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
-/* grilla servicios */
-
-.servicios{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:40px;
-width:80%;
-max-width:1000px;
-}
-
-.servicio{
-background:rgba(255,255,255,0.1);
-padding:30px;
-border-radius:15px;
-}
-
-/* animaciones */
+/* animación scroll */
 
 .reveal{
 opacity:0;
 transform:translateY(40px);
-transition:all 1s ease;
+transition:1s;
 }
 
 .reveal.active{
 opacity:1;
 transform:translateY(0);
+}
+
+/* responsive */
+
+@media(max-width:900px){
+
+.hero-container{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-img img{
+width:300px;
+}
+
 }
 
 </style>
@@ -103,18 +148,32 @@ transform:translateY(0);
 
 <body>
 
+
 <!-- HERO -->
 
-<section>
+<section class="hero">
 
-<h1 class="reveal">Flor Saviotti Traduce</h1>
+<div class="hero-container">
 
-<p class="reveal">
-Precisión y calidad en cada palabra. Traducciones profesionales
-para documentos, traducciones públicas, sitios web y proyectos internacionales.
+<div class="hero-text reveal">
+
+<h1>Flor Saviotti Traduce</h1>
+
+<p class="subtitulo">
+Traducciones precisas y confiables para documentos, empresas y proyectos internacionales. 
+Conectamos idiomas y culturas con calidad profesional.
 </p>
 
+</div>
 
+
+<div class="hero-img reveal">
+
+<img src="traductor.jpg">
+
+</div>
+
+</div>
 
 </section>
 
@@ -151,21 +210,17 @@ para documentos, traducciones públicas, sitios web y proyectos internacionales.
 
 <!-- CONTACTO -->
 
-<section id="contacto">
+<section>
 
-<h2 class="reveal">¿Por qué elegirnos?</h2>
+<h2 class="reveal">Contacto</h2>
 
 <p class="reveal">
-Traducciones profesionales, entregas puntuales y confidencialidad absoluta en cada proyecto.
+Consultas y cotizaciones sin compromiso.
 </p>
 
-<div class="reveal">
-
-<a class="boton" href="mailto:contacto@tusitio.com">
+<a class="boton reveal" href="mailto:contacto@tusitio.com">
 Enviar consulta
 </a>
-
-</div>
 
 </section>
 
@@ -200,3 +255,4 @@ reveal();
 
 </body>
 </html>
+
