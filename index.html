@@ -9,9 +9,9 @@
 
 <meta name="description" content="Servicios profesionales de traducción pública de documentos y localización de contenidos.">
 
-<!-- Google Fonts -->
-
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 
@@ -29,6 +29,50 @@ h1,h2,h3{
 font-family:'Playfair Display', serif;
 }
 
+/* HEADER */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+box-sizing:border-box;
+z-index:1000;
+background:rgba(0,0,0,0.15);
+backdrop-filter:blur(6px);
+}
+
+/* LOGO */
+
+.logo img{
+height:55px;
+}
+
+/* MENU */
+
+nav{
+display:flex;
+gap:35px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-size:14px;
+letter-spacing:1px;
+font-weight:600;
+opacity:0.9;
+transition:0.3s;
+}
+
+nav a:hover{
+opacity:1;
+}
+
 /* HERO */
 
 .hero{
@@ -36,19 +80,12 @@ min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
-padding:60px;
+padding:120px 40px 60px 40px;
 text-align:center;
 }
 
 .hero-container{
 max-width:900px;
-}
-
-/* LOGO HERO */
-
-.hero-logo img{
-width:180px;
-margin-bottom:30px;
 }
 
 h1{
@@ -65,7 +102,7 @@ line-height:1.6;
 /* SECCIONES */
 
 section{
-padding:100px 40px;
+padding:120px 40px;
 text-align:center;
 }
 
@@ -74,7 +111,7 @@ font-size:40px;
 margin-bottom:40px;
 }
 
-/* BIO */
+/* SOBRE MI */
 
 .bio-container{
 display:flex;
@@ -95,7 +132,7 @@ text-align:left;
 .bio-img img{
 width:380px;
 border-radius:12px;
-box-shadow:0 20px 40px rgba(0,0,0,0.2);
+box-shadow:0 20px 40px rgba(0,0,0,0.25);
 }
 
 /* SERVICIOS */
@@ -109,7 +146,7 @@ margin:auto;
 }
 
 .servicio{
-background:rgba(255,255,255,0.1);
+background:rgba(255,255,255,0.12);
 padding:30px;
 border-radius:15px;
 backdrop-filter:blur(5px);
@@ -121,7 +158,7 @@ backdrop-filter:blur(5px);
 display:inline-block;
 margin-top:30px;
 background:white;
-color:#207E98;
+color:#22809A;
 padding:15px 30px;
 border-radius:30px;
 text-decoration:none;
@@ -133,7 +170,26 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
-/* ANIMACION SCROLL */
+/* REDES */
+
+.redes{
+margin-top:30px;
+display:flex;
+justify-content:center;
+gap:25px;
+font-size:26px;
+}
+
+.redes a{
+color:white;
+transition:0.3s;
+}
+
+.redes a:hover{
+transform:scale(1.2);
+}
+
+/* ANIMACION */
 
 .reveal{
 opacity:0;
@@ -150,12 +206,12 @@ transform:translateY(0);
 
 @media(max-width:900px){
 
-h1{
-font-size:40px;
+header{
+padding:15px 20px;
 }
 
-.hero-logo img{
-width:140px;
+nav{
+gap:20px;
 }
 
 .bio-container{
@@ -171,6 +227,10 @@ text-align:center;
 width:260px;
 }
 
+h1{
+font-size:40px;
+}
+
 }
 
 </style>
@@ -179,18 +239,29 @@ width:260px;
 
 <body>
 
+<header>
 
-<!-- SLIDE 1 HERO -->
+<div class="logo">
+<img src="logo.jpg">
+</div>
+
+<nav>
+<a href="#sobre">SOBRE MÍ</a>
+<a href="#servicios">SERVICIOS</a>
+<a href="#contacto">CONTACTO</a>
+</nav>
+
+</header>
+
+
+
+<!-- HERO -->
 
 <section class="hero">
 
 <div class="hero-container reveal">
 
-<div class="hero-logo">
-<img src="logo.jpg" alt="Logo Flor Saviotti Traduce">
-</div>
-
-
+<h1>Flor Saviotti Traduce</h1>
 
 <p class="subtitulo">
 Traducciones precisas y confiables para documentos, empresas y proyectos internacionales.
@@ -203,32 +274,30 @@ Te ayudo a conectar tu lengua y cultura con calidad profesional.
 
 
 
-<!-- SLIDE 2 BIO -->
+<!-- SOBRE MI -->
 
-<section>
+<section id="sobre">
 
-<h2 class="reveal">Bio</h2>
+<h2 class="reveal">Sobre mí</h2>
 
 <div class="bio-container">
 
 <div class="bio-text reveal">
 
 <p>
-Me llamo Florencia, me fascinan las palabras desde que tengo memoria, junto con la escritura y la lectura. 
+Me llamo Florencia, me fascinan las palabras desde que tengo memoria, junto con la escritura y la lectura.
 Y en ese recorrido por las palabras, sus combinaciones y significados, me encontré con mi vocación hace ya unos cuantos años.
 </p>
 
 <p>
-¿Qué hago? Traduzco, básicamente interpreto las ideas de un texto y busco la mejor manera para expresar esas ideas en otro idioma. 
+¿Qué hago? Traduzco, básicamente interpreto las ideas de un texto y busco la mejor manera para expresar esas ideas en otro idioma.
 Escribo, reescribo, simplifico y ayudo a que personas (muy) distintas puedan comunicarse.
 </p>
 
 </div>
 
 <div class="bio-img reveal">
-
-<img src="traductor.jpg" alt="Trabajo de traducción">
-
+<img src="traductor.jpg">
 </div>
 
 </div>
@@ -237,7 +306,7 @@ Escribo, reescribo, simplifico y ayudo a que personas (muy) distintas puedan com
 
 
 
-<!-- SLIDE 3 SERVICIOS -->
+<!-- SERVICIOS -->
 
 <section id="servicios">
 
@@ -246,7 +315,7 @@ Escribo, reescribo, simplifico y ayudo a que personas (muy) distintas puedan com
 <div class="servicios">
 
 <div class="servicio reveal">
-<h3>Traducciones inglés<>español</h3>
+<h3>Traducciones inglés <> español</h3>
 <p>Puedo ayudarte con todo tipo de documentación que precises para realizar trámites en Argentina o en el exterior.</p>
 </div>
 
@@ -266,9 +335,9 @@ Escribo, reescribo, simplifico y ayudo a que personas (muy) distintas puedan com
 
 
 
-<!-- SLIDE 4 CONTACTO -->
+<!-- CONTACTO -->
 
-<section>
+<section id="contacto">
 
 <h2 class="reveal">Contacto</h2>
 
@@ -279,6 +348,18 @@ Consultas y cotizaciones sin compromiso.
 <a class="boton reveal" href="mailto:claudio_berdun@yahoo.com.ar">
 Enviar consulta
 </a>
+
+<div class="redes reveal">
+
+<a href="https://instagram.com/" target="_blank">
+<i class="fa-brands fa-instagram"></i>
+</a>
+
+<a href="https://linkedin.com/" target="_blank">
+<i class="fa-brands fa-linkedin"></i>
+</a>
+
+</div>
 
 </section>
 
@@ -309,7 +390,6 @@ window.addEventListener("scroll", reveal);
 reveal();
 
 </script>
-
 
 </body>
 </html>
