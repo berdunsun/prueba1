@@ -9,8 +9,6 @@
 
 <meta name="description" content="Servicios profesionales de traducción pública de documentos y localización de contenidos.">
 
-<!-- Google Font -->
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
@@ -31,21 +29,11 @@ display:flex;
 align-items:center;
 justify-content:center;
 padding:60px;
+text-align:center;
 }
 
 .hero-container{
-display:flex;
-align-items:center;
-justify-content:space-between;
-max-width:1200px;
-width:100%;
-gap:60px;
-}
-
-/* texto hero */
-
-.hero-text{
-max-width:600px;
+max-width:900px;
 }
 
 h1{
@@ -59,15 +47,7 @@ opacity:0.9;
 line-height:1.6;
 }
 
-/* imagen */
-
-.hero-img img{
-width:420px;
-border-radius:12px;
-box-shadow:0 20px 40px rgba(0,0,0,0.2);
-}
-
-/* secciones */
+/* SECCIONES */
 
 section{
 padding:100px 40px;
@@ -79,7 +59,31 @@ font-size:40px;
 margin-bottom:40px;
 }
 
-/* servicios */
+/* BIO */
+
+.bio-container{
+display:flex;
+align-items:center;
+justify-content:space-between;
+max-width:1100px;
+margin:auto;
+gap:60px;
+}
+
+.bio-text{
+flex:1;
+font-size:20px;
+line-height:1.7;
+text-align:left;
+}
+
+.bio-img img{
+width:380px;
+border-radius:12px;
+box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* SERVICIOS */
 
 .servicios{
 display:grid;
@@ -96,7 +100,7 @@ border-radius:15px;
 backdrop-filter:blur(5px);
 }
 
-/* botón */
+/* BOTÓN */
 
 .boton{
 display:inline-block;
@@ -114,7 +118,7 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
-/* animación scroll */
+/* ANIMACIÓN SCROLL */
 
 .reveal{
 opacity:0;
@@ -127,17 +131,25 @@ opacity:1;
 transform:translateY(0);
 }
 
-/* responsive */
+/* RESPONSIVE */
 
 @media(max-width:900px){
 
-.hero-container{
+h1{
+font-size:40px;
+}
+
+.bio-container{
 flex-direction:column;
 text-align:center;
 }
 
-.hero-img img{
-width:300px;
+.bio-text{
+text-align:center;
+}
+
+.bio-img img{
+width:260px;
 }
 
 }
@@ -149,25 +161,48 @@ width:300px;
 <body>
 
 
-<!-- HERO -->
+<!-- SLIDE 1 HERO -->
 
 <section class="hero">
 
-<div class="hero-container">
-
-<div class="hero-text reveal">
+<div class="hero-container reveal">
 
 <h1>Flor Saviotti Traduce</h1>
 
 <p class="subtitulo">
-Traducciones precisas y confiables para documentos, empresas y proyectos internacionales. 
+Traducciones precisas y confiables para documentos, empresas y proyectos internacionales.
 Te ayudo a conectar tu lengua y cultura con calidad profesional.
 </p>
 
 </div>
 
+</section>
 
-<div class="hero-img reveal">
+
+
+<!-- SLIDE 2 BIO -->
+
+<section>
+
+<h2 class="reveal">Bio</h2>
+
+<div class="bio-container">
+
+<div class="bio-text reveal">
+
+<p>
+Me llamo Florencia, me fascinan las palabras desde que tengo memoria, junto con la escritura y la lectura. 
+Y en ese recorrido por las palabras, sus combinaciones y significados, me encontré con mi vocación hace ya unos cuantos años.
+</p>
+
+<p>
+¿Qué hago? Traduzco, básicamente interpreto las ideas de un texto y busco la mejor manera para expresar esas ideas en otro idioma. 
+Escribo, reescribo, simplifico y ayudo a que personas (muy) distintas puedan comunicarse.
+</p>
+
+</div>
+
+<div class="bio-img reveal">
 
 <img src="traductor.jpg">
 
@@ -179,7 +214,7 @@ Te ayudo a conectar tu lengua y cultura con calidad profesional.
 
 
 
-<!-- SERVICIOS -->
+<!-- SLIDE 3 SERVICIOS -->
 
 <section id="servicios">
 
@@ -189,17 +224,17 @@ Te ayudo a conectar tu lengua y cultura con calidad profesional.
 
 <div class="servicio reveal">
 <h3>Traducciones inglés<>español</h3>
-<p>Puedo ayudarte con todo tipo de documentación que precises para relizar trámites en Argentina o en exterior.</p>
+<p>Puedo ayudarte con todo tipo de documentación que precises para realizar trámites en Argentina o en el exterior.</p>
 </div>
 
 <div class="servicio reveal">
-<h3>Corrección de textos en inglés y en español</h3>
+<h3>Corrección de textos</h3>
 <p>Puedo ayudarte a que tu mensaje llegue de forma clara y directa.</p>
 </div>
 
 <div class="servicio reveal">
-<h3>Capacitación en inglés y en español</h3>
-<p>Puedo ayudarte a que encuentres tue voz en otro idioma.</p>
+<h3>Capacitación en idiomas</h3>
+<p>Puedo ayudarte a que encuentres tu voz en otro idioma.</p>
 </div>
 
 </div>
@@ -208,7 +243,7 @@ Te ayudo a conectar tu lengua y cultura con calidad profesional.
 
 
 
-<!-- CONTACTO -->
+<!-- SLIDE 4 CONTACTO -->
 
 <section>
 
@@ -255,4 +290,3 @@ reveal();
 
 </body>
 </html>
-
