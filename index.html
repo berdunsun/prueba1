@@ -15,6 +15,10 @@
 
 <style>
 
+html{
+scroll-snap-type:y mandatory;
+}
+
 body{
 margin:0;
 font-family:'Open Sans', sans-serif;
@@ -42,17 +46,13 @@ align-items:center;
 padding:15px 40px;
 box-sizing:border-box;
 z-index:1000;
-background:#22809A;
+background:rgba(0,0,0,0.15);
 backdrop-filter:blur(6px);
 }
-
-/* LOGO */
 
 .logo img{
 height:55px;
 }
-
-/* MENU */
 
 nav{
 display:flex;
@@ -62,7 +62,7 @@ gap:35px;
 nav a{
 color:white;
 text-decoration:none;
-font-size:12px;
+font-size:14px;
 letter-spacing:1px;
 font-weight:600;
 opacity:0.9;
@@ -73,43 +73,54 @@ nav a:hover{
 opacity:1;
 }
 
-/* HERO */
-
-.hero{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:120px 40px 60px 40px;
-text-align:center;
-}
-
-.hero-container{
-max-width:900px;
-transform:translateY(-1cm);
-}
-
-h1{
-font-size:56px;
-margin-bottom:20px;
-}
-
-.subtitulo{
-font-size:22px;
-opacity:0.9;
-line-height:1.6;
-}
-
-/* SECCIONES */
+/* SECTIONS */
 
 section{
-padding:120px 40px;
+height:100vh;
+scroll-snap-align:start;
+padding:120px 40px 80px 40px;
+box-sizing:border-box;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
 }
 
 h2{
 font-size:40px;
 margin-bottom:40px;
+}
+
+/* HERO */
+
+.hero-container{
+max-width:900px;
+transform:translateY(-40px);
+}
+
+h1{
+font-size:56px;
+margin-bottom:20px;
+opacity:0;
+animation:fadeHero 1.5s forwards;
+}
+
+@keyframes fadeHero{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.subtitulo{
+font-size:22px;
+opacity:0.9;
+line-height:1.6;
 }
 
 /* SOBRE MI */
@@ -190,7 +201,7 @@ transition:0.3s;
 transform:scale(1.2);
 }
 
-/* ANIMACION */
+/* ANIMACION SCROLL */
 
 .reveal{
 opacity:0;
